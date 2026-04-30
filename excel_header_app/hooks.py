@@ -242,3 +242,8 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+override_whitelisted_methods = {
+    "frappe.desk.query_report.export_query": (
+        "excel_header_app.overrides.report_export.export_query"
+    ),
+}
