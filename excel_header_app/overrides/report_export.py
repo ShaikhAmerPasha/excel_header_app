@@ -7,7 +7,9 @@ from frappe.utils import cint
 
 
 def _today_formatted() -> str:
-    return datetime.date.today().strftime("%d-%m-%Y")
+    # return datetime.date.today().strftime("%d-%m-%Y")
+    return datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+
 
 
 @frappe.whitelist()
